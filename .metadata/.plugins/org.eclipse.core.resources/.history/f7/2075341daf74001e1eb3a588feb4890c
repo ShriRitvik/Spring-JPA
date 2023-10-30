@@ -1,0 +1,13 @@
+package com.SpringJPA.SaveAll;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringJpaSaveAllApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringJpaSaveAllApplication.class, args);
+	}
+
+}

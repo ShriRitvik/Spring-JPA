@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;SpringJPA_SaveAll&apos;" deleteContents="true" description="Delete resource &apos;SpringJPA_SaveAll&apos;" element1="/SpringJPA_SaveAll" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1698399328802"/>
+</session>

@@ -1,0 +1,23 @@
+package com.SpringJPA.SaveAll;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.SpringJPA.SaveAll.repo.SpringJPASaveAllRepo;
+
+@SpringBootApplication
+public class SpringJpaSaveAllApplication implements CommandLineRunner {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringJpaSaveAllApplication.class, args);
+	}
+
+	 private SpringJPASaveAllRepo springJPASaveAllRepo;
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
