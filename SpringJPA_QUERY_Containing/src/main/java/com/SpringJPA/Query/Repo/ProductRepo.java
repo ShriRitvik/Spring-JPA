@@ -1,5 +1,7 @@
 package com.SpringJPA.Query.Repo;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.SpringJPA.Query.Entity.Product;
@@ -13,7 +15,7 @@ public interface ProductRepo extends JpaRepository<Product, Integer> {
 	 *  If no product entry is found, this method returns null.
 	 */
 	
-	public Product findByNameContaining(String title);
+	public List<Product> findByNameContaining(String name);
 	
 
 }

@@ -24,23 +24,29 @@ public class SpringJpaQueryApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		
+//		
+//		Product p=new Product();
+//		p.setName("ritu");
+//		p.setDescription("playing");
+//		
+//		Product p1=new Product();
+//		p1.setName("ritvikikk");
+//		p1.setDescription("playing a ball");
+//		
+//		productRepo.saveAll(List.of(p,p1));
 		
-		Product p=new Product();
-		p.setName("ritu");
-		p.setDescription("playing");
 		
-		Product p1=new Product();
-		p1.setName("ritvikikk");
-		p1.setDescription("playing a ball");
+		List<Product> pp1=productRepo.findByNameContaining("a");
+		pp1.forEach((contain)->{
+			System.out.println(contain.getName());
+			System.out.println(contain.getDescription());
+		});
 		
-		productRepo.saveAll(List.of(p,p1));
-		
-		
-		Product distinctProduct=productRepo.findByNameContaining("ritu");
-		
-		System.out.println(distinctProduct.getName());
 		
 	}
+	
+	//findAllByNameAsc
+	//findAllBynameDsc
 	
 	
 
