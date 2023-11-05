@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 import com.SpringJPA.Query.Entity.Product;
 import com.SpringJPA.Query.Repo.ProductRepo;
@@ -36,9 +37,18 @@ public class SpringJpaQueryApplication implements CommandLineRunner {
 		productRepo.saveAll(List.of(p,p1));
 		
 		
-		Product distinctProduct=productRepo.findDistinctByName("ritu");
+	  List<Product> isEqulQuery=productRepo.findByName("ritu");
 		
-		System.out.println(distinctProduct.getName());
+		
+	Product isEqulQuery1=(Product) productRepo.findByNameIs("ritu");
+		System.out.println(isEqulQuery1.getName());
+		
+//		Product isEqulQuery2=(Product) productRepo.findByNameEquals("ritu");
+//		System.out.println(isEqulQuery2.getName());
+		
+		
+		
+	
 		
 	}
 	

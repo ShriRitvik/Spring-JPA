@@ -38,8 +38,9 @@ public class SpringJpaSaveAllApplication implements CommandLineRunner {
 		     
 		
 		//springJPASaveAllRepo.save(product);
-		springJPASaveAllRepo.findById(product.getId()).get();
-		System.out.println(product.getName());
+		springJPASaveAllRepo.findAll().forEach((p) -> {
+            System.out.println(p.getName());
+        });
 		
 		
 	}
