@@ -1,22 +1,24 @@
 package com.SpringJPA.OneToOne.Bidirectional.Entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "jpa_laptop")
+@Table(name = "jpabi_laptop")
 public class Laptop {
-	
+
 	@Id
 	private int id;
-	
+
 	private String brand;
-	
+
 	private String model;
-	
-	//private Student student;
+
+	@OneToOne(cascade = CascadeType.ALL,mappedBy = "laptop")
+	private Student student;
 
 	public Laptop() {
 		super();
@@ -28,7 +30,7 @@ public class Laptop {
 		this.id = id;
 		this.brand = brand;
 		this.model = model;
-		//this.student = student;
+		 this.student = student;
 	}
 
 	public int getId() {
@@ -55,20 +57,18 @@ public class Laptop {
 		this.model = model;
 	}
 
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
 	@Override
 	public String toString() {
 		return "Laptop [id=" + id + ", brand=" + brand + ", model=" + model + "]";
 	}
-
-//	public Student getStudent() {
-//		return student;
-//	}
-
-//	public void setStudent(Student student) {
-//		this.student = student;
-//	}
-
-	
 	
 	
 

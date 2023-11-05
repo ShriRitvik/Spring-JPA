@@ -2,13 +2,14 @@ package com.SpringJPA.OneToOne.Bidirectional.Entity;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="jpa_student")
+@Table(name="jpabi_student")
 public class Student {
     
 	
@@ -20,8 +21,8 @@ public class Student {
 	private String about;
 	
 	
-	// Unidirectional
-	@OneToOne(cascade = CascadeType.ALL)
+	// BIDIRECTIONAL
+	@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	@JoinColumn(name = "laptop_id")
 	private Laptop laptop;
 
